@@ -6,9 +6,10 @@ import {
   Roboto_700Bold,
 } from '@expo-google-fonts/roboto';
 
+import { AuthContextProvider } from './src/contexts/AuthContext';
 import { THEME } from './src/styles/theme';
 import { Loading } from './src/components/Loading';
-import SignIn from './src/screens/SignIn';
+import { New } from './src/screens/New';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -19,14 +20,14 @@ export default function App() {
 
   return (
     <NativeBaseProvider theme={THEME}>
-      <StatusBar
-        barStyle='light-content'
-        translucent
-        backgroundColor='transparent'
-      />
-      <Center flex={1} bgColor='gray.900' fontFamily='heading'>
-        {fontsLoaded ? <SignIn /> : <Loading />}
-      </Center>
+      <AuthContextProvider>
+        <StatusBar
+          barStyle='light-content'
+          translucent
+          backgroundColor='transparent'
+        />
+        {fontsLoaded ? <New /> : <Loading />}
+      </AuthContextProvider>
     </NativeBaseProvider>
   );
 }
