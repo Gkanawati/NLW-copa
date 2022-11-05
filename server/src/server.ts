@@ -1,5 +1,6 @@
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
+import jwt from '@fastify/jwt';
 
 import { pollRoutes } from './routes/polls';
 import { userRoutes } from './routes/user';
@@ -16,6 +17,11 @@ async function bootstrap() {
 
   await fastify.register(cors, {
     origin: true,
+  });
+
+  // em produção isso precisa ser uma variável ambiente
+  await fastify.register(jwt, {
+    secret: 'nlwcopa',
   });
 
   await fastify.register(pollRoutes);
