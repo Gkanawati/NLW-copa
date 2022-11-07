@@ -11,7 +11,6 @@ interface Props {
 }
 
 export function Team({ code, position, onChangeText, teamPoints }: Props) {
-  console.log(teamPoints);
   return (
     <HStack alignItems='center'>
       {position === 'left' && (
@@ -21,7 +20,7 @@ export function Team({ code, position, onChangeText, teamPoints }: Props) {
       <Input
         w={10}
         h={9}
-        value={teamPoints && teamPoints.toString()}
+        value={typeof teamPoints == 'number' && teamPoints.toString()}
         textAlign='center'
         fontSize='xs'
         keyboardType='numeric'

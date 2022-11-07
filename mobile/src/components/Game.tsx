@@ -36,7 +36,6 @@ export function Game({
   setSecondTeamPoints,
   onGuessConfirm,
 }: Props) {
-  console.log(data);
   const { colors, sizes } = useTheme();
 
   const when = dayjs(data.date)
