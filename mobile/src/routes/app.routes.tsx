@@ -6,6 +6,7 @@ import { PlusCircle, SoccerBall } from 'phosphor-react-native';
 import { New } from '../screens/New';
 import { Polls } from '../screens/Polls';
 import { Find } from '../screens/Find';
+import { Details } from '../screens/Details';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -19,6 +20,7 @@ function PollStackRoutes() {
       }}
     >
       <Stack.Screen name='polls' component={Polls} />
+      <Stack.Screen name='details' component={Details} />
       <Stack.Screen name='find' component={Find} />
     </Stack.Navigator>
   );
