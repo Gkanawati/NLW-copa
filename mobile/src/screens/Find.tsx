@@ -1,7 +1,7 @@
-import { VStack, Heading } from 'native-base';
-import { Header } from '../components/Header';
 import { TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { VStack, Heading } from 'native-base';
 
+import { Header } from '../components/Header';
 import { Input } from '../components/Input';
 import { Button } from '../components/Button';
 

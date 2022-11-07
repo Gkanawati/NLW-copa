@@ -29,7 +29,7 @@ export default function Home(props: HomeProps) {
       await navigator.clipboard.writeText(code);
       setPollTitle('');
       alert(
-        'Bolão criado com sucesso! O códio foi copiado para a área de transferência'
+        'Bolão criado com sucesso! O código foi copiado para a área de transferência'
       );
     } catch (error) {
       console.log(error);

@@ -6,7 +6,7 @@ import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
 
 export default function SignIn() {
-  const { signIn, user } = useAuth();
+  const { signIn, isUserLoading } = useAuth();
 
   return (
     <Center flex={1} w='full' bgColor='gray.900' p={7}>
@@ -18,6 +18,12 @@ export default function SignIn() {
         type='SECONDARY'
         mt={12}
         onPress={signIn}
+        isLoading={isUserLoading}
+        _loading={{
+          _spinner: {
+            color: '#FFF',
+          },
+        }}
       />
 
       <Text color='white' textAlign='center' mt={4}>
