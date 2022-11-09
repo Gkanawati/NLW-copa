@@ -71,3 +71,7 @@ Acesse a documentação de cada projeto:
 <img src='https://user-images.githubusercontent.com/87530595/200600097-0ea5a6a3-9fb8-4135-bf60-0535c93d25f8.png' height='450' />
 
 </div>
+
+## 💽 Schema do Banco de Dados
+
+![NLW-Copa-database](https://user-images.githubusercontent.com/87530595/200837071-d4a4436a-4f2e-463a-9177-3ba516a9ce2c.svg)
